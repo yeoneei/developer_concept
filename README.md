@@ -17,8 +17,10 @@
 - 기타
 
 # 운영체제
-- [시스템콜 (유저모드, 커널모드)](./운영체제/systemcall.md)
-- 시스템 부트
+- [시스템콜](./운영체제/systemcall.md)
+- [시스템 부트](./운영체제/systemboot.md)
+- [프로세스](./운영체제/process.md)
+- 스레드
 - 프로세스와 스레드의 차이(Process vs Thread)
 - 멀티 프로세스 대신 멀티 스레드를 사용하는 이유
 - Thread-safe
