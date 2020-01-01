@@ -30,7 +30,7 @@
 - java 명령어는 JVM을 보통의 프로세스처럼 실행히키고, JVM은 java 프로그램 Program을 가상기계 안에서 실행한다.
 
 ## process 상태도
-![process1](./img/process1.png)
+![process1](./img/process1.png)}
 - new : 프로세스가 생성중
 - running : 명령어들이 실행
 - waiting : 프로세스가 어떤 사건이 일어나기를 기다린다
