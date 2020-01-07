@@ -4,6 +4,9 @@
 - User Mode vs Kernel Mode
 
 ## Dual-Mode Operation (이중동작 모드)
+- 나눈 이유 : 보안
+- User Mode:
+- Kernel Mode:
 - OS는 사용자 모드(User Mode)와 커널모드 (Kernel Mode ==  Surpervisor Mode == Privileged Mode )로 나뉜다
 - 하드웨어 모드 비트(Modie bit)가 있는데 0이면 커널모드, 1이면 유저 모드
 - 최초 부팅시 하드웨어는 커널모드에서 시작한다. 운영체제가 올라오고, 거기서 부터 사용자 모드가 시작된다. 
@@ -35,7 +38,7 @@
 - 메모리의 특정 주소 범위에는 어떤 동작들이 할당되어 있다
 - 이것을 시스템콜 테이블(System Call table) 또는 인터럽트 벡터(Interrupt vector)라고 부른다
     - fopen()함수를 호출하면 파일을 여는 함수를 찾기 위해 시스템콜 테이블을 참조한다.
-- 시스템콜 테이블은 메모리 주소의 모음인데, 해당 메모리 주소는 인터럽스 서비스 루틴(Interrupt service routine)을 가리키고 있다
+- 시스템콜 테이블은 메모리 주소의 모음인데, 해당 메모리 주소는 인터럽스 서비스 루틴(Interrupt Service Routine)을 가리키고 있다
     - Interrupt Service Routine : C로 짜여진 코드이며, 시스템 콜 테이블이 가르키는 특정 메무리 주소가 구체적으로 어떤 동작을 할지 정의해 놓은 것
 - 처리방식
     - 유저 프로세스가 시스템콜을 요청하면 제어가 커널로 넘어온다 (유저모드 -> 커널모드)
