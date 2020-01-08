@@ -30,8 +30,8 @@
 - 뮤텍스와 세마포어의 차이
 - 동기와 비동기
 - 프로세스 동기화
-- [CPU 스케줄링](./운영체제/cpuSchdeuling.md)
-- [메모리 관리 전략](./운영체제/memeory.md)
+- [CPU 스케줄링](./운영체제/cpuScheduling.md)
+- [메모리 관리 전략](./운영체제/memory.md)
 - Main memory
     - Address binding 
     - Segmentation
