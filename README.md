@@ -28,10 +28,10 @@
 - [데드락](./운영체제/deadlocks.md)
     - 교착상태(데드락, Deadlock)의 개념과 조건
 - 뮤텍스와 세마포어의 차이
-- [CPU 스케줄링](./운영체제/cpuSchdeuling.md)
 - 동기와 비동기
 - 프로세스 동기화
-- 메모리 관리 전략
+- [CPU 스케줄링](./운영체제/cpuSchdeuling.md)
+- [메모리 관리 전략](./운영체제/memeory.md)
 - Main memory
     - Address binding 
     - Segmentation
