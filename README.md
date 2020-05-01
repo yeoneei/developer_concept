@@ -142,13 +142,13 @@
 - Fibonacci에서의 세 가지(Recursion, Dynamic Programming, 반복) 방식에 대한 시간복잡도와 공간복잡도 차이
 - 정렬 알고리즘의 종류와 개념
 - 최소 신장 트리(MST, Minimum Spanning Tree)란
-- Kruskal MST 알고리즘
-- Prim MST 알고리즘
+    - Kruskal MST 알고리즘
+    - Prim MST 알고리즘
 - Disjoint set, ion find
 - 벨만포드
 - 스케쥴링알고리즘
 
-자바
+# 자바
 - java 프로그래밍이란
 - Java SE와 Java EE 애플리케이션 차이
 - java와 c/c++의 차이점
@@ -187,6 +187,7 @@
 - 람다
 - 제너릭
 - Shallow Copy, Deep Copy
+- Stream
 
 # 자바스크립트
 - JavaScript Event Loop
