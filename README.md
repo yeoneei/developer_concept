@@ -1,4 +1,4 @@
-# developer_interview
+# developer_concpet
 개발자로서 알게되는 모든것을 정리해 두는 레파지토리
 
 # List
