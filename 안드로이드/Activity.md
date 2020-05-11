@@ -405,11 +405,40 @@ public class MyActivity extends Activity {
     - 포커스가 B로 옮겨짐
   - Activity A가 더이상 화면에 표지 되지 않는 경우 `onStop()` 메서드가 실행된다.
 
-
-
 콜백 순서를 예측할 수 있기 때문에 전환되는 정보를 관리 할 수 있다.
 
 
+
+### Activity 상태 변경
+
+사용자에 의해 트리거되고 시스템에 의해 트리거되는 다양한 이벤트로 인해 Activity가 상태가 변경될수 있음
+
+- 구성 변경 발생
+  - ex : 가로 모드, 세로모드
+  - activity가 제거되고 다시 생성
+  - 원래 활동 인스턴스에서는 `onPause()`, `onStop()`, `onDestory()`가 트리거 이후 새 인스턴스에서 `onCreate()`, `onStart()`, `onResume()` 콜백이 트리거
+  - ViewModel, onSaveInstanceState(), 영구 로컬 저장소의 조합을 활용하여 UI 상태 유지
+  - 멀티 윈도우 : 사용자에게 표시되는 앱이 두개더라도 상호작용하고 있는 앱만 포커스를 가진다
+    - 사용자가 앱을 전환 할 떄마다 두 메서드가 전환
+- activity 또는 대화상자가 포그라운드로 나옴
+  - activity를 부분적으로 가리면 가려진 activity는 포커스를 읽고 '일시중지'상태로 전환
+    - `onPause()`를 호출
+  - 다시 포커스를 얻으면 `onResume()` 호출
+  - 사용자가 최근 사용 또는 홈 버튼을 탭하면 시스템은 현재 활동이 가려진 것처럼 동작한다.
+- 사용자가 백버튼을 누름
+  - `onPause()`, `onStop()`,` onDestory()`콜백을 거치며 전환
+  - activity가 제거될 뿐만 아니라 백 스택에서도 삭제
+  - `onSaveInstacneState()`콜백이 실행되지 않는다.
+  - `onBackPressed()`메소드를 재정의하면 'confirm-quit'대화 상자와 같은 일부 맞춤 동작을 구현 할 수 있음
+    - 사용시 `super.onBackPressed()`를 호출해야함
+- 시스템에 앱 프로세스를 종료
+  - UI 상태를 저장하고 다시 복구함
+
+
+
+### Activity Test 
+
+androidX테스트 라이브러리 사용, 공부하고 정리하기
 
 
 
