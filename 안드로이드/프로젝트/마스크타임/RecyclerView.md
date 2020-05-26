@@ -54,6 +54,11 @@ View rootview = inflater.inflate(R.layout.item_list, null);
 ~~~
 
 - null 처리가 없으므로 스크롤 할 때마다 inflator를 통해서 View의 create가 발생하고 findViewById도 함께 호출된다
+  - `inflator`란?
+    -  **xml로 정의된 view (또는 menu 등)를 실제 객체화 시키는 용도**
+    - **XML에 정의된 Resource를 View 객체로 반환**해주는 역할
+    - 복잡한 구조의 view를 java코드로 만들게 되면 생성하고 속성 넣어주느라 코드가 길어질 수 있는데,
+      그걸 미리 xml로 만들어 놓고 java코드에서는 inflater를 활용하여 바로 view를 생성
 - 이래서 `ViewHolder`의 개념이 등장한다
   - 강제적이지 않지만 <u>위와 같이 inflate와 findViewById를 리스트 뷰에서 연속적으로 발생시키면 메모리와 성능에 악영향을 미칠 수 있다</u> 
 - ListView에서 ViewHolder 패턴을 적용시키면?
